@@ -1,0 +1,60 @@
+/* google fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    text-transform: capitalize;
+    background-color: rgb(252, 252, 197);
+}
+
+.heading{
+    font-family: "Indie Flower", serif;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: rgb(246, 115, 158);
+}
+
+#menu-list{
+    display: grid;
+    padding: 40px 160px 0;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+#card img {
+    width: 160px;
+    height: 100px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    #card {
+        max-width: 400px;
+    }
+    #card img {
+        height: 240px;
+        width: 100%;
+    }
+}
+
+#buttons{
+    label{
+        padding: 5px 10px;
+        border: 1px solid rgb(245, 170, 223);
+        cursor: pointer;
+        border-radius: 5px;
+        transition: all 0.3s;
+        &:hover {
+            background-color: palevioletred;
+            color: white;
+        }
+    }
+    input{
+        display: none;
+    }
+    div:has(input:checked) label {
+        background-color: black;
+        color: white;
+    }
+}
